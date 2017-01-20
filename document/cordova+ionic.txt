@@ -1,0 +1,44 @@
+混合开发
+一、初始化环境
+（1）JDK
+（2）nodejs
+（3）配置android环境
+（4）配置cordova环境
+	npm install -g phonegap
+	npm install -g cordova
+ (5) 配置ionic 
+	npm install -g cordova ionic
+
+npm安装，往往会失败。
+这个是由于GFW，很多插件下载不下来，还好我们有淘宝镜像来解决这个问题：
+$ npm install -g cnpm --registry=https://registry.npm.taobao.org
+安装完成后，以后所有的插件都使用cnpm这个命令来进行安装。
+
+
+
+
+Ionic开发
+
+新建一个Ionic项目
+$ ionic start myApp tabs
+
+3 运行我们刚才创建的Ionic项目
+$ cd myApp
+$ ionic platform add android 添加android支持
+$ ionic build android 生成android
+$ ionic emulate android 用模拟器运行
+  ionic run android 真机运行
+
+4 在浏览器预览并实时刷新
+$ ionic serve
+
+我们选择localhost，并把浏览器调成mobile模式；
+
+然后我们进入编辑器修改项目文件夹www中的代码，看到，浏览器已经可以跟着我们的保存实时刷新，非常好用！！！
+
+
+二、安装插件
+sqllite
+cordova plugin add https://github.com/litehelpers/Cordova-sqlite-storage
+calendar
+cordova plugin add cordova-plugin-calendar
